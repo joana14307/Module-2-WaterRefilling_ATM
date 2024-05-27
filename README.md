@@ -173,7 +173,7 @@ pragma solidity ^0.8.9;
 
 //import "hardhat/console.sol";
 
-contract Assessment {
+contract WaterRefillingATM {
     address payable public owner;
     uint256 public balance;
 
@@ -208,28 +208,27 @@ contract Assessment {
     // custom error
     error InsufficientBalance(uint256 balance, uint256 withdrawAmount);
 
-    function withdraw(uint256 _withdrawAmount) public {
+    function pay(uint256 _payAmount) public {
         require(msg.sender == owner, "You are not the owner of this account");
         uint _previousBalance = balance;
-        if (balance < _withdrawAmount) {
+        if (balance < _payAmount) {
             revert InsufficientBalance({
                 balance: balance,
-                withdrawAmount: _withdrawAmount
+                withdrawAmount: _payAmount
             });
         }
 
-        // withdraw the given amount
-        balance -= _withdrawAmount;
+        // pay in the given amount
+        balance -= _payAmount;
 
         // assert the balance is correct
-        assert(balance == (_previousBalance - _withdrawAmount));
+        assert(balance == (_previousBalance - _payAmountAmount));
 
         // emit the event
-        emit Withdraw(_withdrawAmount);
+        emit pay(_payAmount);
     }
 }
 
-```
 
 ## Authors
 Abdulmanan, Joana A. 8213866@ntc.edu.ph
