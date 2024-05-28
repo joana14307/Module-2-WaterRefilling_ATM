@@ -58,3 +58,15 @@ contract WaterRefillingATM {
         emit pay(_payAmount);
     }
 }
+
+
+        // pay in the given amount
+        balance -= _payAmount;
+
+        // assert the balance is correct
+        assert(balance == (_previousBalance - _payAmountAmount));
+
+        // emit the event
+        emit pay(_payAmount);
+    }
+}
