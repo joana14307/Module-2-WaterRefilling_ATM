@@ -1,6 +1,6 @@
 # SCM-MODULE-2---METAMASK
 
-This Solidity smart contract, named `Assessment`, is designed for managing financial transactions. It provides functionalities for depositing funds and withdrawing funds, ensuring secure and transparent financial interactions.
+This Solidity smart contract, named `WaterRefillingATM`, is designed for managing financial transactions. It provides functionalities for depositing funds and withdrawing funds, ensuring secure and transparent financial interactions.
 
 ## Description
 
