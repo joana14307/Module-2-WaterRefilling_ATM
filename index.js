@@ -61,7 +61,7 @@ export default function HomePage() {
 
   const deposit = async() => {
     if (atm) {
-      let tx = await atm.deposit(1);
+      let tx = await atm.deposit(10);
       await tx.wait()
       getBalance();
     }
@@ -69,7 +69,7 @@ export default function HomePage() {
 
   const withdraw = async() => {
     if (atm) {
-      let tx = await atm.withdraw(1);
+      let tx = await atm.withdraw(10);
       await tx.wait()
       getBalance();
     }
@@ -94,8 +94,8 @@ export default function HomePage() {
       <div>
         <p>Your Account: {account}</p>
         <p>Your Balance: {balance}</p>
-        <button onClick={deposit}>Deposit 1 ETH</button>
-        <button onClick={withdraw}>Withdraw 1 ETH</button>
+        <button onClick={deposit}>Deposit 10 ETH</button>
+        <button onClick={withdraw}>Withdraw 10 ETH</button>
       </div>
     )
   }
@@ -125,3 +125,4 @@ export default function HomePage() {
     </main>
   )
 }
+
